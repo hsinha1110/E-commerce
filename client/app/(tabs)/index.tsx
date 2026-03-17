@@ -9,7 +9,6 @@ import { useEffect, useState } from "react";
 import {
   ActivityIndicator,
   Dimensions,
-  FlatList,
   Image,
   ScrollView,
   Text,
@@ -26,7 +25,8 @@ export default function Home() {
   const categories = [{ id: "all", name: "All", icon: "grid" }, ...CATEGORIES];
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoding] = useState(true);
-
+  const isLiked = true;
+  
   const fetchProducts = async () => {
     setProducts(dummyProducts);
     setLoding(false);
